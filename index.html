@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="课程练习：个人介绍、技能与作品门户。">
+    <title>张嘉鑫的个人主页</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <!-- 样式与脚本：骨架依赖，CI/CD一般不修改 -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="works-data.js" defer></script>
+    <script src="works-render.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <!-- ========== 骨架：阅读进度条，JS控制，请勿删除id ========== -->
+    <div class="reading-progress" id="reading-progress"></div>
+
+    <!-- ========== 骨架：页面头部导航【布局骨架，尽量少改】 ========== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#about">我的主页</a>
+            <!-- 主导航：新增栏目在这里增加a标签，href对应下面section的id -->
+            <nav aria-label="主导航">
+                <a href="#about">关于</a>
+                <a href="#experience">经历</a>
+                <a href="#projects">科研</a>
+                <a href="#skills">技能</a>
+                <a href="#portfolio">作品</a>
+                <a href="#teaching">教学</a>
+                <a href="#publications">成果</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ======================================================
+            【业务内容区｜经常修改：个人基础信息】
+            CI/CD更新：姓名、角色、学校、城市、联系方式全部在这里修改
+        ====================================================== -->
+        <section class="hero" id="about">
+            <div class="container">
+                <div class="hero-top">
+                    <div class="hero-copy">
+                        <h1>张嘉鑫 <span>Zhang</span></h1>
+                        <p class="hero-role">软件技术专业学生 · 前端开发学习者</p>
+                        <p class="hero-school">我的学校 · 我的班级</p>
+                    </div>
+                    <div class="hero-visual">
+                        <figure><!-- 头像图片放置在这里 --></figure>
+                    </div>
+                </div>
+
+                <div class="research-direction" id="research-direction">
+                    <span class="eyebrow">学习方向</span>
+                    <p>HTML5、CSS3、JavaScript，正在学习 Git、数据库与网站部署。</p>
+                </div>
+
+                <!-- 个人详情模板，新增信息复制div块即可 -->
+                <div class="profile-details">
+                    <div>
+                        <span>学习阶段</span>
+                        <p>在校学习</p>
+                    </div>
+                    <div>
+                        <span>所在城市</span>
+                        <p>珠海</p>
+                    </div>
+                    <div>
+                        <span>联系</span>
+                        <p>请填写可公开的联系方式</p>
+                    </div>
+                    <div>
+                        <span>学校地址</span>
+                        <p>广东科学技术职业学院</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ======================================================
+            【业务内容区｜经常修改：教育与工作经历】
+            新增经历：直接复制 <div class="experience-item">...</div>模板
+        ====================================================== -->
+        <section class="section" id="experience">
+            <div class="container">
+                <header class="section-heading">
+                    <h2>教育与工作经历</h2>
+                </header>
+                <div class="section-content">
+                    <!-- 经历item模板 复制下面整块新增 -->
+                    <div class="experience-item">
+                        <p class="experience-heading">
+                            <strong>我的学校 · 软件技术专业</strong>
+                            <time>在读</time>
+                        </p>
+                        <p class="experience-detail">学习网页开发，用项目记录成长。</p>
+                    </div>
+                    <!-- 在这里粘贴新experience-item -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ======================================================
+            【业务内容区｜经常修改：项目经历】
+            新增项目：复制 <article class="research-item">...</article>模板
+        ====================================================== -->
+        <section class="section" id="projects">
+            <div class="container">
+                <header class="section-heading">
+                    <h2>项目经历</h2>
+                </header>
+                <div class="section-content">
+                    <!-- 项目模板，复制整块新增 -->
+                    <article class="research-item">
+                        <h3><time>课程练习</time>个人主页</h3>
+                        <p>项目内容：制作自己的网页，展示资料与作品，记录修改、测试与发布过程。</p>
+                    </article>
+                    <!-- 粘贴新 research-item -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ======================================================
+            【业务内容区｜经常修改：技能列表】
+            新增技能：复制 <li>...</li>模板
+        ====================================================== -->
+        <section class="section" id="skills">
+            <div class="container">
+                <header class="section-heading">
+                    <h2>技能与实践</h2>
+                </header>
+                <div class="section-content">
+                    <ul class="skills-list">
+                        <li><strong>网页内容</strong> HTML5 结构、图片、链接。</li>
+                        <li><strong>页面样式</strong> CSS3 字体、颜色、响应式布局。</li>
+                        <li><strong>开发过程</strong> JavaScript、Git、检查与部署。</li>
+                        <!-- 新增技能li写在这里 -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ======================================================
+            【业务内容区｜经常修改：作品门户】
+            JS依赖id：works‑tags / works‑sort 禁止删除
+            新增作品：复制 <li class="work-card xxx">...</li>模板
+        ====================================================== -->
+        <section class="section" id="portfolio">
+            <div class="container">
+                <header class="section-heading">
+                    <h2>作品门户</h2>
+                    <p class="works-notice">以下为教学示例，完成后可替换为自己的作品。</p>
+                </header>
+
+                <!-- 作品筛选工具栏，JS动态渲染，id不能删除 -->
+                <div class="works-toolbar">
+                    <div class="works-tags" id="works-tags"></div>
+                    <button class="works-sort" id="works-sort" type="button">按年份：新→旧</button>
+                </div>
+
+                <ol class="portfolio-list">
+                    <!-- 作品卡片模板：复制整块<li>新增作品 -->
+                    <li class="work-card work-blog">
+                        <a href="https://ffd-p2-blog.netlify.app/" rel="noopener noreferrer" target="_blank">
+                            <div class="work-cover">
+                                <img src="assets/work-blog.png" alt="长风成卷 · 博客应用的实际网页截图" width="1200" height="800" decoding="async">
+                            </div>
+                            <div class="work-copy">
+                                <h3>长风成卷 · 博客应用</h3>
+                                <p>文章展示、接口与数据库。</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="work-card work-community">
+                        <a href="https://ffd-p3-community.netlify.app/" rel="noopener noreferrer" target="_blank">
+                            <div class="work-cover">
+                                <img src="assets/work-community.png" alt="群像云图 · 社区应用的实际网页截图" width="1200" height="800" decoding="async">
+                            </div>
+                            <div class="work-copy">
+                                <h3>群像云图 · 社区应用</h3>
+                                <p>内容发布与社区互动。</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="work-card work-greeting-card">
+                        <a href="https://ffd-p4-greeting-card.netlify.app/" rel="noopener noreferrer" target="_blank">
+                            <div class="work-cover">
+                                <img src="assets/work-greeting-card.png" alt="一笺心意 · 祝福卡片的实际网页截图" width="1200" height="800" decoding="async">
+                            </div>
+                            <div class="work-copy">
+                                <h3>一笺心意 · 祝福卡片</h3>
+                                <p>卡片制作与作品分享。</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="work-card work-music-station">
+                        <a href="https://ffd-p5-music-station.netlify.app/" rel="noopener noreferrer" target="_blank">
+                            <div class="work-cover">
+                                <img src="assets/work-music-station.png" alt="星声音乐站 · 音乐应用的实际网页截图" width="1200" height="800" decoding="async">
+                            </div>
+                            <div class="work-copy">
+                                <h3>星声音乐站 · 音乐应用</h3>
+                                <p>网页音频与交互实践。</p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 在这里粘贴新 work‑card 作品卡片 -->
+                </ol>
+            </div>
+        </section>
+
+
+        <!-- ======================================================
+            【业务内容区｜经常修改：学习与实践目标】
+        ====================================================== -->
+        <section class="section" id="teaching">
+            <div class="container">
+                <header class="section-heading">
+                    <h2>学习与实践</h2>
+                </header>
+                <div class="section-content">
+                    <div class="teaching-group">
+                        <h3>本学期目标</h3>
+                        <ol>
+                            <li>每次课完成一个可运行的小改动。</li>
+                            <li>能解释自己修改的 HTML、CSS 和 JavaScript。</li>
+                            <li>使用 Git 记录版本，让作品能被别人访问。</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ======================================================
+            【业务内容区｜经常修改：学习记录/成果列表】
+            新增记录复制<li>模板
+        ====================================================== -->
+        <section class="section" id="publications">
+            <div class="container">
+                <header class="section-heading">
+                    <h2>学习记录</h2>
+                </header>
+                <div class="section-content">
+                    <div class="publication-group">
+                        <h3>我的记录</h3>
+                        <ol class="references">
+                            <li>完成第一张个人主页。</li>
+                            <li>后续在这里补充自己的真实成果。</li>
+                            <!-- 新增成果写新li -->
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== 骨架组件 JS钩子，id禁止删除 ========== -->
+    <p aria-live="polite" class="section-indicator" id="section-indicator"></p>
+    <button aria-label="返回页面顶部" class="to-top" id="to-top" type="button">↑</button>
+
+    <!-- ========== 页脚骨架 ========== -->
+    <footer>
+        <div class="container footer-inner">
+            <a href="#about">回到顶部</a>
+            <a href="#portfolio">作品门户</a>
+        </div>
+    </footer>
+</body>
+</html>
